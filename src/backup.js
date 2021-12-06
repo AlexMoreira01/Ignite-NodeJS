@@ -5,22 +5,6 @@ const app = express();
 
 app.use(express.json());
 
-/**
- * GET - Buscar informação dentro do servidor
- * POST - Inserir informação no servidor
- * PUT - Alterar informação no servidor
- * PATCH - Alterar informação especifica
- * DELETE - Deletar informação no servidor
- */
-
-/**
- * Tipos de parâmetros
- * 
- * Routes Params => Identificar um recurso editar/deletar/Buscar   na URL
- * Query Params => Paginação / Filtro
- * Body Params => Os objetos inserçao/alteração (JSON)
- */
-
 app.get("/courses", (request, response) => {
     const query = request.query;
     console.log(query)
